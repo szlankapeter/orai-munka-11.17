@@ -1,0 +1,82 @@
+body{
+    margin: 20px;
+    padding: 0;
+    background-color: antiquewhite;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+
+main{
+
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas: "h h h" "n n n" "a a as" "f f f";
+}
+
+header{
+    grid-area: h;
+}
+nav{
+    grid-area: n;
+}
+nav ul{
+    display: flex;
+}
+nav li{
+    margin-right: 50px;
+    color: blue;
+    background-color: white;
+    list-style: none;
+}
+
+article{
+    display: grid;
+    grid-area: a;
+    grid-template-columns: 2fr 2fr 2fr 2fr;
+    
+}
+article>div{
+    width: 200px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 20px;
+}
+article>div>div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+article>div>div>button{
+    font-size: 10px;
+    width: 60px;
+    height: 30px;
+    margin: 15px;
+    border-radius: 5px;
+}
+article>div>div>p{
+    margin: 15px;
+    display: inline-block;
+    text-align: center;
+    padding-top: 5px;
+    border: 1px black dotted;
+    border-radius: 5px;
+}
+article>div>h2, p{
+    margin: 15px;
+}
+
+aside{
+    grid-area: as;
+    background-color: white;
+    border-radius: 20px;
+
+}
+aside>div>div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+footer{
+    grid-area: f;
+}
