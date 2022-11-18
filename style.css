@@ -25,6 +25,7 @@ header{
     text-align: center;
 }
 nav{
+    margin: auto;
     grid-area: n;
 }
 nav ul{
@@ -34,7 +35,9 @@ nav li{
     margin-right: 50px;
     color: blue;
     background-color: white;
+    padding: 15px;
     list-style: none;
+    border-radius: 5px;
 }
 
 article{
@@ -73,6 +76,7 @@ article>div>h2, p{
 }
 
 aside{
+    margin: auto 0;
     grid-area: as;
     background-color: white;
     border-radius: 20px;
@@ -121,9 +125,10 @@ button:hover{
         display: grid;
         grid-area: a;
         grid-template-columns: 2fr 2fr;
-        
     }
-
+    aside{
+        margin: auto;
+    }
 
 }
 
@@ -138,10 +143,12 @@ button:hover{
     }
 
     main{
-
         display: grid;
         grid-template-columns: 1fr 3fr 1fr;
         grid-template-areas: "h h h" "n n n" "as as as ""a a a" "f f f";
+    }
+    article{
+        margin: auto;
     }
     article>div{
         width: 400px;
@@ -150,11 +157,24 @@ button:hover{
         border-radius: 20px;
     }
     aside{
+        margin: auto;
         grid-area: as;
         background-color: white;
         border-radius: 20px;
         height: fit-content;
         padding-bottom: 20px;
-        width: fit-content;
+        width: 90%;
+    }
+    nav li{
+        color: blue;
+        background-color: white;
+        padding: 15px;
+        margin-bottom: 10px;
+        list-style: none;
+        border-radius: 5px;
+    }
+    nav ul{
+        display: flex;
+        flex-direction: column;
     }
 }
